@@ -24,9 +24,12 @@ class FileOperation:
     self.overwritten = False
     self.detail = ""
   
-  def add_file(self, file, dst_dir):
+  def add_file(self, file, dst_dir, dst_has_file=False):
     self.src = normalize_fp( pathlib.Path(file) )
-    self.dst = normalize_fp( pathlib.Path(pathlib.Path(dst_dir) / self.src.name) )
+    if dst_has_file:
+      self.dst = normalize_fp( pathlib.Path(dst_dir) )
+    else:
+      self.dst = normalize_fp( pathlib.Path(pathlib.Path(dst_dir) / self.src.name) )
     self.ready = True
   
   def __as_string(self, oper_type):
