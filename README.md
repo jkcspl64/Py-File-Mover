@@ -37,7 +37,7 @@ options:
 
 --------------------------------------------------------------------------
 
-usage: file_mover.py {move,copy} folder [-h] [-w WILDCARD]
+usage: file_mover.py {move,copy} folder [-h] [-R] [-w WILDCARD]
                                         in_folder out_folder
 
 positional arguments:
@@ -48,6 +48,7 @@ positional arguments:
 
 options:
   -h, --help            show this help message and exit
+  -R, --recursive       Process files recursively
   -w WILDCARD, --wildcard WILDCARD
                         A wildcard specifying which files to process (default:
                         ALL)
