@@ -3,6 +3,8 @@ A Python script that moves files given a list or a folder containing them
 
 This Python 3.x CLI script was made to move/copy files, given either a list of their paths or a folder path containing them.
 
+The document icon was taken from: https://www.freepik.com/icon/copy_9376689
+
 ## Parameters
 
 ```
@@ -70,7 +72,7 @@ options:
 3. (Optional) Run the following command to create a binary executable:
 
    ```
-   $ pyinstaller -F file_mover.py
+   $ pyinstaller --icon=docs.ico -F file_mover.py
    ```
 
    The result will be in the `dist` directory.
